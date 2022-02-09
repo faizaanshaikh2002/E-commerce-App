@@ -1,7 +1,7 @@
-.itemCont {
-  width: 18rem;
-  padding-top: 2px;
-  background-color: #25282c;
-  color: white;
+.card {
+  background-color: white;
+  color: black;
   border: 2px solid white;
+  border-radius: 0.36rem;
+  box-shadow: 0 5px 15px 0 #7e7b7b;
 }

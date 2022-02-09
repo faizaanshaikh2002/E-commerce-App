@@ -1,44 +1,32 @@
 import React, { useEffect, useState } from "react";
 import Item from "./Item";
 
-const Store = (props) => {
-  // constructor() {
-  //     super()
-  //     this.state = {
-  //         products: []
-  //     }
-  // }
+const Store = ({ setcartItems }) => {
   const [products, setproducts] = useState([]);
 
-  // async componentDidMount() {
-  //     let url = "https://fakestoreapi.com/products"
-  //     let data = await fetch(url)
-  //     let parsedData = await data.json()
-  //     console.log(parsedData)
-  //     this.setState({ products: parsedData })
-  // }
-
-  const getProduct = async () => {
-    let url = "https://fakestoreapi.com/products";
-    let data = await fetch(url);
-    let parsedData = await data.json();
-    console.log(parsedData);
-    // this.setState({ products: parsedData });
-    setproducts(parsedData);
-  };
 
   useEffect(() => {
     getProduct();
   }, []);
 
+  const getProduct = async () => {
+    let url = "https://fakestoreapi.com/products";
+    let data = await fetch(url);
+    let parsedData = await data.json();
+    // console.log(parsedData);a
+    setproducts(parsedData);
+  };
+
   return (
-    <div className="container my-3">
-      <div className="row">
+    <div className="mb-5 container">
+      <div className="row row-cols-lg-3 row-cols-md-2 row-cols-1">
         {products.map((element) => {
           // console.log(element)
           return (
-            <div className="col-md-4" key={element.id}>
+            <div key={element.id}>
               <Item
+                setcartItems={setcartItems}
+                main={element}
                 title={element.title}
                 price={element.price}
                 rating={element.rating.rate}

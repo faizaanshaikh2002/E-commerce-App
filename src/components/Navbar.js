@@ -1,51 +1,47 @@
 import React from "react";
+import "bootstrap-icons/font/bootstrap-icons.css"
 
-const Navbar = () => {
+const Navbar = ({ cartItems }) => {
+  // setnumbers(cartItems.length)
+
+  // React.useEffect(() => {
+  // }, [cartItems.length, setnumbers])
+
+  // const handleOnClick = () => {
+  //   console.log("Updated: ", cartItems)
+  //   (cartItems.length)
+  // }
+
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="/">
-            Navbar
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
-                  Home
-                </a>
-              </li>
-            </ul>
-            <form className="d-flex">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Search
-              </button>
-              <i className="fa-solid fa-cart-shopping"></i>
-            </form>
-            {/* <div className="d-flex" >
-                <i className="fa-solid fa-cart-shopping"></i>
-              </div> */}
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div className="container-fluid">
+        <span style={{ paddingLeft: "90px", fontSize: "30px" }}>
+          SkipKart
+        </span>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div
+          className="collapse navbar-collapse  d-flex justify-content-end"
+          id="navbarSupportedContent"
+        >
+          <div className="d-flex" style={{ paddingRight: "95px" }} >
+            {/* <button style={{ outline: 'none', border: 'none', backgroundColor: "#212529", color: "white" }}><i className="bi bi-cart" style={{ fontSize: "25px", padding: '2px' }}></i>Cart</button> */}
+            <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style={{ outline: 'none', border: 'none', backgroundColor: "#212529", color: "white" }}><i className="bi bi-cart" style={{ fontSize: "25px", padding: '2px' }}></i>
+              Cart
+            </button>
           </div>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav >
   );
 };
 
