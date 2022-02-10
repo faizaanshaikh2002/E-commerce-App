@@ -25,10 +25,10 @@ const Item = ({ setcartItems, main, title, price, rating, imageUrl }) => {
         </div>
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
-          <p className="card-text">
-            <strong>Price </strong>: ${price}
+          <p className="card-text" style={{ color: "green" }}>
+            <strong style={{ color: "green" }}>Price </strong>: ${price}
             <br />
-            <strong>Rating </strong>: {rating}/5
+            <strong style={{ color: "green" }}>Rating </strong>: {rating}/5
           </p>
           {/* <p className="card-text">price: ${price}</p>
           <p className="card-text">rating: {rating}/5</p> */}
