@@ -8,8 +8,8 @@ function App() {
   const [cartItems, setcartItems] = useState([]);
 
   React.useEffect(() => {
-    console.log("Updated: ", cartItems)
-  }, [cartItems])
+    console.log("Updated: ", cartItems);
+  }, [cartItems]);
 
   return (
     <>

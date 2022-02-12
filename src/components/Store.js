@@ -4,7 +4,6 @@ import Item from "./Item";
 const Store = ({ setcartItems }) => {
   const [products, setproducts] = useState([]);
 
-
   useEffect(() => {
     getProduct();
   }, []);

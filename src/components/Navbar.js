@@ -1,5 +1,5 @@
 import React from "react";
-import "bootstrap-icons/font/bootstrap-icons.css"
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 const Navbar = ({ cartItems }) => {
   // setnumbers(cartItems.length)
@@ -15,9 +15,7 @@ const Navbar = ({ cartItems }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <span style={{ paddingLeft: "90px", fontSize: "30px" }}>
-          SkipKart
-        </span>
+        <span style={{ paddingLeft: "90px", fontSize: "30px" }}>SkipKart</span>
         <button
           className="navbar-toggler"
           type="button"
@@ -33,15 +31,30 @@ const Navbar = ({ cartItems }) => {
           className="collapse navbar-collapse  d-flex justify-content-end"
           id="navbarSupportedContent"
         >
-          <div className="d-flex" style={{ paddingRight: "95px" }} >
+          <div className="d-flex" style={{ paddingRight: "95px" }}>
             {/* <button style={{ outline: 'none', border: 'none', backgroundColor: "#212529", color: "white" }}><i className="bi bi-cart" style={{ fontSize: "25px", padding: '2px' }}></i>Cart</button> */}
-            <button type="button" className="btn btn-primary shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal" style={{ outline: 'none', border: 'none', backgroundColor: "#212529", color: "white" }}><i className="bi bi-cart" style={{ fontSize: "25px", padding: '2px' }}></i>
-              Cart
+            <button
+              type="button"
+              className="btn btn-primary shadow-none"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              style={{
+                outline: "none",
+                border: "none",
+                backgroundColor: "#212529",
+                color: "white",
+              }}
+            >
+              <i
+                className="bi bi-cart"
+                style={{ fontSize: "25px", padding: "2px" }}
+              ></i>
+              Cart <sup> {cartItems.length}</sup>
             </button>
           </div>
         </div>
       </div>
-    </nav >
+    </nav>
   );
 };
 

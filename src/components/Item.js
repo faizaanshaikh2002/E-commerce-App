@@ -3,14 +3,12 @@ import "../App.css";
 import "./items.css";
 
 const Item = ({ setcartItems, main, title, price, rating, imageUrl }) => {
-
   const handleOnClick = () => {
-    setcartItems((prev) => [...prev, main])
-  }
-
+    setcartItems((prev) => [...prev, main]);
+  };
 
   return (
-    <div className="mt-5 col" >
+    <div className="mt-5 col">
       <div className="card" style={{ height: "25rem" }}>
         <div
           className="align-self-center p-2 card-image"
@@ -24,7 +22,12 @@ const Item = ({ setcartItems, main, title, price, rating, imageUrl }) => {
           />
         </div>
         <div className="card-body">
-          <h5 className="card-title" style={{ fontWeight: "lighter", fontFamily: "sans-serif" }}>{title}</h5>
+          <h5
+            className="card-title"
+            style={{ fontWeight: "lighter", fontFamily: "sans-serif" }}
+          >
+            {title}
+          </h5>
           <p className="card-text mt-4" style={{ color: "green" }}>
             <strong style={{ color: "green" }}>Price </strong>: ${price}
             <br />
@@ -42,7 +45,7 @@ const Item = ({ setcartItems, main, title, price, rating, imageUrl }) => {
           Add to Cart
         </button>
       </div>
-    </div >
+    </div>
   );
 };
 
