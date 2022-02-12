@@ -24,8 +24,8 @@ const Item = ({ setcartItems, main, title, price, rating, imageUrl }) => {
           />
         </div>
         <div className="card-body">
-          <h5 className="card-title">{title}</h5>
-          <p className="card-text" style={{ color: "green" }}>
+          <h5 className="card-title" style={{ fontWeight: "lighter", fontFamily: "sans-serif" }}>{title}</h5>
+          <p className="card-text mt-4" style={{ color: "green" }}>
             <strong style={{ color: "green" }}>Price </strong>: ${price}
             <br />
             <strong style={{ color: "green" }}>Rating </strong>: {rating}/5
@@ -36,7 +36,7 @@ const Item = ({ setcartItems, main, title, price, rating, imageUrl }) => {
         <button
           type="button"
           className="btn-md mb-3 col-10 mx-auto btn btn-primary"
-          style={{ width: "250px" }}
+          style={{ width: "350px" }}
           onClick={handleOnClick}
         >
           Add to Cart

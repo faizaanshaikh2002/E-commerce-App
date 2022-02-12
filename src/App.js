@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <Navbar cartItems={cartItems} />
-      <Modal />
+      <Modal cartItems={cartItems} setcartItems={setcartItems} />
       <Store setcartItems={setcartItems} />
     </>
   );

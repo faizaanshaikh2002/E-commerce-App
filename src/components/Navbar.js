@@ -35,7 +35,7 @@ const Navbar = ({ cartItems }) => {
         >
           <div className="d-flex" style={{ paddingRight: "95px" }} >
             {/* <button style={{ outline: 'none', border: 'none', backgroundColor: "#212529", color: "white" }}><i className="bi bi-cart" style={{ fontSize: "25px", padding: '2px' }}></i>Cart</button> */}
-            <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style={{ outline: 'none', border: 'none', backgroundColor: "#212529", color: "white" }}><i className="bi bi-cart" style={{ fontSize: "25px", padding: '2px' }}></i>
+            <button type="button" className="btn btn-primary shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal" style={{ outline: 'none', border: 'none', backgroundColor: "#212529", color: "white" }}><i className="bi bi-cart" style={{ fontSize: "25px", padding: '2px' }}></i>
               Cart
             </button>
           </div>
